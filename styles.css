@@ -1,0 +1,723 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  border: none;
+  margin: 0;
+}
+
+#mainContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  padding: 0px;
+}
+
+.footerText {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1%;
+  margin: 0px;
+}
+
+.bottomMenuAndFooter {
+  display: flex;
+  flex-direction: row;
+  padding: 1% 6%;
+  justify-content: space-between;
+}
+
+#nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+  height: 10vh;
+  background: rgb(9, 63, 142);
+  background: linear-gradient(
+    90deg,
+    rgba(9, 63, 142, 0.7) 1%,
+    rgba(29, 112, 199, 0.7) 55%,
+    rgba(78, 165, 255, 0.7) 100%
+  );
+  width: 100%;
+  width: 100vw;
+  padding: 0px 2%;
+  margin-top: 0px;
+  position: sticky;
+  top: 0;
+  padding-right: 2wv;
+  z-index: 10;
+  flex-wrap: wrap;
+}
+
+.popup-bg {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(123, 163, 206, 0.502);
+  z-index: 11;
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: visibility 0s, opacity 0.5s;
+}
+
+.popupInput {
+  border-radius: 50px;
+  border: none;
+  box-shadow: 0px 0px 15px rgba(0, 11, 97, 0.378);
+  font-size: 1vw;
+
+  margin: 1.5%;
+  color: rgb(65, 65, 65);
+  width: 18vw;
+  padding: 1% 4%;
+}
+
+#popuph2 {
+  color: white;
+  font-size: 2vw;
+}
+
+.bg-active {
+  visibility: visible;
+  opacity: 1;
+}
+
+#popup {
+  background: linear-gradient(
+      90deg,
+      rgba(9, 63, 142, 0.85) 1%,
+      rgba(29, 112, 199, 0.85) 46%,
+      rgba(78, 165, 255, 0.85) 100%
+    ),
+    url(images/jean-philippe-delberghe-75xPHEQBmvA-unsplash.jpg);
+  background-position: 50%;
+  height: 60%;
+  max-width: 40%;
+  border-radius: 50px;
+  position: relative;
+  box-shadow: 0px 0px 15px rgba(0, 11, 97, 0.378);
+}
+
+.popupMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1%;
+  height: 100%;
+}
+
+.popupAltStyle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  padding: 15%;
+  color: white;
+  font-size: 1.3vw;
+}
+
+.popupOff {
+  display: none;
+}
+
+.popupOn {
+  opacity: 1;
+  visibility: visible;
+}
+
+#popup > h2 {
+  margin-top: 5%;
+  font-size: 1.5vw;
+  color: white;
+}
+
+#popupBtn {
+  border-radius: 50px;
+  background-color: white;
+  box-shadow: 0px 0px 15px rgba(0, 11, 97, 0.378);
+  color: rgb(43, 134, 230);
+  transition: background-color 0.1s;
+  border: none;
+  width: 10vw;
+  font-size: 1vw;
+  font-weight: 600;
+  transition: color 0.1s;
+  margin: 1.5%;
+  padding: 1%;
+}
+
+#popupBtn:hover {
+  box-shadow: 0px 0px 15px rgba(186, 188, 202, 0.378);
+}
+
+#popupX {
+  position: absolute;
+  top: 8%;
+  right: 8%;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+}
+
+#popupX:hover {
+  color: rgb(226, 226, 226);
+}
+
+.navItem {
+  margin: 0px 40px;
+  text-decoration: inherit;
+  color: white;
+  font-weight: 400;
+  font-size: 1.5vw;
+  transition: color 0.1s;
+}
+
+.navItem:hover {
+  color: rgb(226, 226, 226);
+}
+
+.menuDiv h2:hover,
+.menuDiv p:hover {
+  color: rgb(226, 226, 226);
+}
+
+.red {
+  color: red;
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+#mainContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.firstBoxMainDiv {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  padding: 7% 0%;
+}
+
+#firstBoxLeft {
+  margin: 0;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  align-items: flex-end;
+}
+
+.firstBoxRight {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0px;
+  padding-left: 0;
+}
+
+.mainImage {
+  width: 70%;
+  justify-self: center;
+}
+
+.firstBoxText {
+  font-weight: 200;
+  color: rgb(43, 134, 230);
+}
+
+.firstBoxText > h1 {
+  font-size: 4vw;
+}
+
+.firstBoxText > p {
+  font-size: 1.9vw;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 50vw;
+}
+
+.mailingForm {
+  width: auto;
+}
+
+#nameInput,
+#emailInput,
+#mailingBtn {
+  border-radius: 50px;
+  border: none;
+  font-size: 1vw;
+  box-shadow: 0px 0px 15px rgba(0, 11, 97, 0.378);
+}
+
+#emailInput {
+  color: rgb(65, 65, 65);
+  width: 23vw;
+  padding: 2% 3%;
+  font-size: 1.2vw;
+}
+
+#mailingBtn {
+  margin-left: -50px;
+  width: 8vw;
+  padding: 2% 3%;
+  background-color: rgb(43, 134, 230);
+  color: white;
+  font-size: 1.2vw;
+  box-shadow: 0px 0px 15px rgba(0, 11, 97, 0.378);
+  transition: background-color 0.1s;
+}
+
+#mailingBtn:hover {
+  background-color: rgb(69, 149, 234);
+}
+
+#emailThanks {
+  align-self: center;
+}
+
+#emailThanksMsg {
+  font-size: 1vw;
+}
+
+.fadeOut {
+  animation: fade 2s forwards;
+  animation-delay: 2.5s;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.noDisplayOpacity {
+  opacity: 0;
+}
+
+.callbackBox {
+  background: linear-gradient(
+      90deg,
+      rgba(9, 63, 142, 0.85) 1%,
+      rgba(29, 112, 199, 0.85) 46%,
+      rgba(78, 165, 255, 0.85) 100%
+    ),
+    url(images/jean-philippe-delberghe-75xPHEQBmvA-unsplash.jpg);
+  background-position: 50%;
+  display: flex;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: center;
+  padding: 12%;
+  align-items: center;
+  color: white;
+  text-align: center;
+  height: 40%;
+
+  max-height: 18vh;
+}
+
+.callbackBoxThanks {
+  display: flex;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 6%;
+}
+
+.callbackHeaderThanks > h1 {
+  font-size: 1.8vw;
+}
+
+#footer {
+  background: linear-gradient(
+      90deg,
+      rgba(9, 63, 142, 0.85) 1%,
+      rgba(29, 112, 199, 0.85) 46%,
+      rgba(78, 165, 255, 0.85) 100%
+    ),
+    url(images/jean-philippe-delberghe-75xPHEQBmvA-unsplash.jpg);
+  background-position: 50%;
+}
+.footerBox {
+  display: flex;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-around;
+  color: white;
+  text-align: center;
+  padding: 2% 4%;
+  padding-bottom: 0;
+}
+
+.bottomMenu {
+  display: flex;
+  justify-content: center;
+}
+
+.menuDiv {
+  margin: 0px 40px;
+}
+
+.menuDiv > h2 {
+  font-size: 1.4vw;
+}
+
+.menuDiv > p {
+  font-size: 1.3vw;
+}
+
+.menuDiv > h2,
+.menuDiv > p {
+  text-align: left;
+}
+
+.fa-brands {
+  font-size: 1.5vw;
+  padding: 15px;
+  margin: 10px 0px;
+}
+
+.cr {
+  font-size: 0.8vw;
+}
+
+.callbackHeader {
+  padding: 0px;
+  font-size: 1vw;
+}
+
+.callbackInput {
+  border-radius: 50px;
+  border: none;
+  margin: 1% 5%;
+  width: 20vw;
+  padding: 1.5% 3%;
+  box-shadow: 0px 0px 15px rgba(0, 11, 97, 0.378);
+  font-size: 1.2vw;
+  color: rgb(65, 65, 65);
+}
+
+input:focus {
+  outline: none;
+}
+
+#callbackBtn {
+  border-radius: 50px;
+  border: none;
+  width: 12vw;
+  padding: 1.5% 3%;
+  margin: 1% 5%;
+  font-weight: 500;
+  font-size: 1.2vw;
+  background-color: white;
+  color: rgb(43, 134, 230);
+}
+
+#quoteButton {
+  font-size: 1vw;
+  width: 15vw;
+  padding: 3%;
+  margin-left: 0;
+  border-radius: 50px;
+  box-shadow: 0px 0px 15px rgba(0, 11, 97, 0.378);
+}
+
+#secondBox {
+  display: flex;
+  flex-direction: column;
+  padding: 5% 0;
+  color: rgb(65, 65, 65);
+  background-color: white;
+}
+
+.secondBoxImg {
+  width: 100%;
+}
+
+.secondBoxSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  justify-content: space-around;
+  padding: 0% 10%;
+}
+
+.secondBoxTitleDiv {
+  text-align: center;
+  font-size: 25px;
+}
+
+.secondBoxDiv {
+  width: 30%;
+}
+
+.secondBoxDiv h2,
+.secondBoxDiv h3,
+.secondBoxDiv p {
+  margin: 3% 8%;
+}
+
+.secondBoxDiv h2 {
+  font-size: 2vw;
+  font-weight: 400;
+}
+
+.secondBoxDiv h3 {
+  font-size: 1.7vw;
+  font-weight: 350;
+  color: rgb(43, 134, 230);
+}
+
+.secondBoxDiv p {
+  font-size: 1.2vw;
+  font-weight: 200;
+}
+
+.secondBoxTitleText {
+  font-size: 2.6vw;
+}
+
+.buttonStyle {
+  border-radius: 50px;
+  background-color: rgb(43, 134, 230);
+  box-shadow: 0px 0px 15px rgba(0, 11, 97, 0.378);
+  color: white;
+  transition: background-color 0.1s;
+  border: none;
+  margin: 5%;
+  width: 10vw;
+  font-size: 1vw;
+  padding: 3%;
+}
+
+.secondBoxButton {
+  font-size: 1vw;
+  margin: 5% 8%;
+  width: 10vw;
+  padding: 3%;
+}
+
+#altButtonStyle {
+  margin: 0% 2.5%;
+  font-size: 1vw;
+  height: 0px;
+  background-color: transparent;
+  border-radius: 50px;
+  padding: 0px;
+  color: rgb(43, 134, 230);
+  border: none;
+}
+
+.altButtonStyle:hover {
+  color: rgb(78, 165, 255, 1);
+}
+
+.buttonStyle:hover {
+  background-color: rgb(69, 149, 234);
+}
+
+.thirdBox {
+  background: linear-gradient(
+      90deg,
+      rgba(9, 63, 142, 0.85) 1%,
+      rgba(29, 112, 199, 0.85) 46%,
+      rgba(78, 165, 255, 0.85) 100%
+    ),
+    url(images/jean-philippe-delberghe-75xPHEQBmvA-unsplash.jpg);
+  background-position: 50%;
+  display: flex;
+  background-size: cover;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 5% 10%;
+}
+
+.thirdBox > div:first-of-type {
+  width: 28%;
+}
+
+.thirdBoxDiv {
+  width: 18%;
+}
+
+.thirdBoxDiv > h1 {
+  text-align: left;
+  font-size: 2.2vw;
+}
+
+.thirdBoxDiv > h3 {
+  font-size: 4vw;
+  margin: 0;
+}
+
+.thirdBoxDiv > p {
+  font-size: 1.1vw;
+
+  margin: 0;
+}
+
+.thirdBoxDiv > h3:hover {
+  font-weight: bolder;
+  color: rgb(226, 226, 226);
+}
+
+.fourthBoxText {
+  padding-right: 1%;
+  color: rgb(65, 65, 65);
+  width: 45%;
+}
+
+.fourthBoxText > h1 {
+  font-size: 2.5vw;
+  color: rgb(43, 134, 230);
+  margin: 0px;
+}
+
+.fourthBoxText > h2 {
+  font-size: 1.8vw;
+  color: rgb(69, 149, 234);
+}
+
+.fourthBoxText > p {
+  font-size: 1.5vw;
+}
+
+.fourthBoxImage {
+  width: 100%;
+}
+
+.firstBlock {
+  width: 38%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.secondBlock {
+  width: 40%;
+  padding: 5% 0%;
+}
+
+.fourthBox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3% 5%;
+}
+
+#fourthBoxImageOne {
+  display: flex;
+  width: 90%;
+  justify-content: flex-start;
+}
+
+.noDisplay {
+  display: none;
+}
+
+#hamburger {
+  color: white;
+  display: none;
+  padding: 2%;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+}
+
+.show {
+  display: block;
+}
+
+.toAnimateUp {
+  opacity: 0;
+  transform: translateY(3em);
+  transition: transform 0.5s 0.3s ease-out, opacity 0.5s 0.25s ease-out;
+  will-change: transform, opacity;
+}
+
+.toAnimateUp.is-visible {
+  opacity: 1;
+  transform: translateY(0em);
+}
+
+/* 
+.toAnimateDown {
+  opacity: 0;
+  transform: translateY(-3em);
+  transition: transform 1s 0.5s ease-out, opacity 0.5s 0.25s ease-out;
+  will-change: transform, opacity;
+}
+
+.toAnimateDown.is-visible {
+  opacity: 1;
+  transform: translateY(0em);
+}
+
+.toSlideInRight {
+  opacity: 0;
+  transform: translateX(10em);
+  transition: transform 1s 0.5s ease-out, opacity 0.5s 0.25s ease-out;
+  will-change: transform, opacity;
+}
+
+.toSlideInRight.is-visible {
+  opacity: 1;
+  transform: translateX(0em);
+}
+
+.toSlideInLeft {
+  opacity: 0;
+  transform: translateX(-10em);
+  transition: transform 1s 0.5s ease-out, opacity 0.5s 0.25s ease-out;
+  will-change: transform, opacity;
+}
+
+.toSlideInLeft.is-visible {
+  opacity: 1;
+  transform: translateX(0em);
+} */
